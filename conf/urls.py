@@ -65,6 +65,12 @@ urlpatterns += i18n_patterns(
         name="doing-business-with-the-uk"
     ),
     url(
+        r"^international/eu-exit-what-you-need-to-know/$",
+        core.views.CuratedLandingPageCMSView.as_view(),
+        {'slug': 'eu-exit-what-you-need-to-know'},
+        name="eu-exit-landing"
+    ),
+    url(
         r"^international/industries/$",
         core.views.ArticleTopicPageView.as_view(),
         {'slug': 'industries'},
